@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>OAuth Tutorials</title>
+        <style>
+
+        </style>
+        <link rel="stylesheet" href='/public/css/styles.css'>
+        <link rel="stylesheet" type="text/css" href="/public/css/style_chat.css">
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.dev.js'></script>
+	       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+           <script src='/public/js/chat_front.js'></script>
+    </head>
+    <body>
+        <nav>
+            <ul>
+              <% if(user){ %>
+              <li><a href="/auth/logout">Logout</a></li>
+              <% }else{%>
+              <li><a href="/auth/login">Login</a></li>
+              <% }%>
+              <li><a href="/">Homepage</a></li>
+              <li><a href="/profile">Chat</a></li>
+
+            </ul>
+        </nav>
+        <header>
+
+        </header>
+    <main>
+            <% include subdocuments/chat.ejs %>
+    </main>
+    </body>
+</html>

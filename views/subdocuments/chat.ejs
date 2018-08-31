@@ -1,0 +1,18 @@
+<div>
+	<p id="test"></p>
+		<div id="mario-chat" style="font-family: nunito">
+			<div id="chat-window">
+				<div id="output">
+				<% data.forEach(function(item,index){
+				%>
+				<label id='position<%= index %>'><p><strong><%= item.nick %>:</strong><%= item.message %></p></label>
+				<%
+				}); %>
+				</div>
+				<div id="feedback"><p></p></div>
+			</div>
+			<input type="hidden" id="handle" name="" placeholder="Your name"/ value="<%= user.username %>">
+			<input type="text" id="message"  placeholder="message" name="">
+			<button id="send">Send</button>
+		</div>
+<div>
